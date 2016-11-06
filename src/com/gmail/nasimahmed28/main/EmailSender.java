@@ -14,6 +14,6 @@ public class EmailSender
 		
 		Properties properties = System.getProperties();
 		properties.setProperty("mail.smtp.host", host);
-		//Session session = Session.getDefaultInstance(properties);
+	//	Session session = Session.getDefaultInstance(properties);
 	}
 }
