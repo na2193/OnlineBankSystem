@@ -1,5 +1,9 @@
 package com.gmail.nasimahmed28.model;
 
+import java.util.Calendar;
+import java.util.Date;
+import java.util.Random;
+
 public class Registration 
 {
 	private int id;
@@ -55,13 +59,31 @@ public class Registration
 	public String getCraeteOn() {
 		return craeteOn;
 	}
-	public void setCraeteOn(String craeteOn) {
-		this.craeteOn = craeteOn;
-	}
+	
 	public String getUpdatedOn() {
-		return updatedOn;
+		Calendar c = Calendar.getInstance();
+		Date d = c.getTime();
+		String date = d.getYear() + "-" + d.getMonth() + "-" + d.getDay() + " " + d.getHours() 
+					+ ":" + d.getMinutes() + ":" + d.getSeconds();
+			
+		return date;
 	}
+	
 	public void setUpdatedOn(String updatedOn) {
 		this.updatedOn = updatedOn;
 	}	
+	
+	public void setToken(int length) 
+	{
+		String token = "";
+		Random random = new Random();
+		
+		for(int i = 0; i < length; i++)
+		{
+			token += "" + random.nextInt(10);	
+		}
+		
+		this.token = token;
+	}
+	
 }

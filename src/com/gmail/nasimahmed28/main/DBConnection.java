@@ -17,8 +17,16 @@ public class DBConnection
 
 	private static Connection conn;
 	private static PreparedStatement stmt;
-
-	private static void connectToDB()
+	
+	/*
+	 * we cannot instantiate this class
+	 */
+	private DBConnection()
+	{
+		
+	}
+	
+	public static Connection getConnection()
 	{
 		try
 		{
@@ -29,33 +37,8 @@ public class DBConnection
 		{
 			System.out.println(e);
 		}
-	}
-
-	public static boolean validateLogin(String username, String password) throws Exception
-	{
-		boolean valid = false;
-
-		DBConnection.connectToDB();
-
-		String query = "SELECT * FROM ";
-
-		stmt = conn.prepareStatement(query);
-		ResultSet rs = stmt.executeQuery();
-
-		String dbUsername = "", dbPassword = "";
-
-		while(rs.next())
-		{
-			dbUsername = rs.getString("email");
-			dbPassword = rs.getString("password");
-		}
-
-		if(username.equals(dbUsername) && password.equals(dbPassword))
-			valid = true;
-		else
-			valid = false;
-
-		return valid;
+		
+		return conn;
 	}
 
 }

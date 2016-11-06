@@ -24,6 +24,20 @@ public class RegisterServlet extends HttpServlet
 	{
 		Registration register = new Registration();
 		EmailSender sendEmail = new EmailSender();
+		
+		register.setFirstName(request.getParameter("firstname"));
+		register.setLastName(request.getParameter("lastname"));
+		register.setEmail(request.getParameter("email"));
+		register.setToken(10);
+		
+		if (RegistrationService.saveToRegistration(register) > 0)
+		{
+			response.sendRedirect("register-success.jsp");
+		}
+		else
+		{
+			response.sendRedirect("register-failure.jsp");
+		}
 	}
 
 }
