@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 @WebServlet("/RegistrationActivationServlet")
 public class RegistrationActivationServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
+       // adsfds
     /**
      * @see HttpServlet#HttpServlet()
      */
