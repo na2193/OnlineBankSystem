@@ -9,6 +9,7 @@ import java.util.ArrayList;
 import javax.servlet.http.HttpSession;
 
 public class DBConnection 
+// commet
 {
 	private static String url = "jdbc:mysql://localhost:3306/OnlineBankSystem";
 	private static String username = "root";
