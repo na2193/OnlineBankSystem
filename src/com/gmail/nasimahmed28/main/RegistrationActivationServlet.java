@@ -1,11 +1,14 @@
 package com.gmail.nasimahmed28.main;
 
 import java.io.IOException;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
+import com.gmail.nasimahmed28.database.RegistrationService;
 
 @WebServlet("/RegistrationActivationServlet")
 public class RegistrationActivationServlet extends HttpServlet 

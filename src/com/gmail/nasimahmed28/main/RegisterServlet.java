@@ -9,6 +9,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.gmail.nasimahmed28.database.RegistrationService;
 import com.gmail.nasimahmed28.model.Registration;
 
 @WebServlet("/RegisterServlet")

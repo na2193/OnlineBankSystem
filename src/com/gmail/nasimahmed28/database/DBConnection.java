@@ -1,4 +1,4 @@
-package com.gmail.nasimahmed28.main;
+package com.gmail.nasimahmed28.database;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
