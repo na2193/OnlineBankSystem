@@ -7,6 +7,14 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<h2>Success</h2>
+	<h2>You have successfully Registered</h2>
+	<p>Please click on the link to finish registration</p>
+	<a href="RegistrationActivationServlet">Set Password</a>
+	
+	<!--  
+	<form name="checkActivation" action="RegistrationActivationServlet" method="get">
+		<input type="submit" name="submit" value="Submit" id="btnActivate">	
+	 </form> --> 
+	
 </body>
 </html>

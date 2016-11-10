@@ -9,7 +9,6 @@ import java.util.ArrayList;
 import javax.servlet.http.HttpSession;
 
 public class DBConnection 
-// commet
 {
 	private static String url = "jdbc:mysql://localhost:3306/OnlineBankSystem";
 	private static String username = "root";
@@ -17,15 +16,15 @@ public class DBConnection
 
 	private static Connection conn;
 	private static PreparedStatement stmt;
-	
+
 	/*
 	 * we cannot instantiate this class
 	 */
 	private DBConnection()
 	{
-		
+
 	}
-	
+
 	public static Connection getConnection()
 	{
 		try
@@ -37,7 +36,7 @@ public class DBConnection
 		{
 			System.out.println(e);
 		}
-		
+
 		return conn;
 	}
 

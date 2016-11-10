@@ -7,48 +7,32 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-/**
- * Servlet implementation class RegistrationActivationServlet
- */
 @WebServlet("/RegistrationActivationServlet")
-public class RegistrationActivationServlet extends HttpServlet {
+public class RegistrationActivationServlet extends HttpServlet 
+{
 	private static final long serialVersionUID = 1L;
-       // adsfds
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
-    public RegistrationActivationServlet() {
-        super();
-        // TODO Auto-generated constructor stub
-    }
 
-	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
-	 */
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
-		String token = request.getParameter("token");
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException 
+	{
+		String token = request.getParameter("token"); // where is this token coming from
 		System.out.println(token);
-		
-		
+
 		System.out.println(RegistrationService.validateUser(token));
-		
+
 		if(RegistrationService.validateUser(token) > 1)
 		{
-			response.sendRedirect("set-profile.jsp");
+			//response.sendRedirect("set-profile.jsp");
+			response.sendRedirect("set-password.jsp");
 		}
 		else
 		{
 			response.sendRedirect("register-page.jsp");
 		}
-		
 	}
 
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
-	 */
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException
+	{
+
 	}
 
 }
